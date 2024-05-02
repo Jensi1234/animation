@@ -1,0 +1,144 @@
+.nextStep1Css {
+    animation-name: example ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from {
+        /* top: 280px; */
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    to {
+        /* top: 500px; */
+        transform: translateY(200px);
+        opacity: 0;
+    }
+}
+
+.nextStep2 {
+    animation: width2 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes width2 {
+    from {
+        /* top: 260px; */
+        /* width: 750px; */
+        /* opacity: 1; */
+        transform: scaleX(1);
+    }
+
+    to {
+        /* top: 500px; */
+        /* width: 800px; */
+        /* opacity: 0; */
+        transform: scaleX(1.05);
+    }
+}
+
+
+.nextStep2Css {
+    animation: example1 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example1 {
+    from {
+        top: 260px;
+        /* width: 750px; */
+        opacity: 1;
+        /* transform: scaleX(1); */
+    }
+
+    to {
+        top: 500px;
+        /* width: 800px; */
+        opacity: 0;
+        /* transform: scaleX(1.05); */
+    }
+}
+
+.nextStep3Css {
+    animation: example2 3s;
+}
+
+@keyframes example2 {
+    from {
+        /* width: 700px; */
+        transform: scaleX(1);
+    }
+
+    to {
+        /* width: 800px */
+        transform: scaleX(1.1);
+    }
+}
+
+.backStep1Css {
+    animation: back-step1 3s;
+
+}
+
+@keyframes back-step1 {
+    from {
+        top: 500px;
+        opacity: 0;
+    }
+
+    to {
+        top: 280px;
+        opacity: 1;
+    }
+}
+
+.backStep2 {
+    animation: width2 3s;
+}
+
+@keyframes width2 {
+    from {
+        /* width: 800px */
+        transform: scaleX(1.05);
+    }
+
+    to {
+        /* width: 750px; */
+        transform: scaleX(1);
+    }
+}
+
+.backStep2Css {
+    animation: back-step2 3s;
+}
+
+@keyframes back-step2 {
+    from {
+        top: 500px;
+        opacity: 0;
+    }
+
+    to {
+        top: 260px;
+        opacity: 1;
+    }
+
+}
+
+.backStep3Css {
+    animation: back-step3 3s;
+}
+
+@keyframes back-step3 {
+    from {
+        /* width: 800px; */
+        transform: scale(1.1);
+    }
+
+    to {
+        /* width: 700px; */
+        transform: scale(1);
+    }
+}
