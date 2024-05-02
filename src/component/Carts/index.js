@@ -7,8 +7,8 @@ import { AppContext } from '../../context/AppContext';
 
 
 const Carts = () => {
-    const { currentCart, nextCart1, nextCart2, nextCart3 , topCss2 } = useContext(AppContext)
-    console.log('Carts', nextCart1)
+    const { currentCart, nextCart1 , topCss2 } = useContext(AppContext)
+    // console.log('Carts', nextCart1)
 
     return (
         <Box position='relative'>

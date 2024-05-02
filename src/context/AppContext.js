@@ -19,40 +19,33 @@ const AppProvider = ({ children }) => {
 
     const handleNext = () => {
         setNextCart1(style.nextStep1Css)
-        setNextCart2(style.nextStep2Css)
-        setNextCart3(style.nextStep3Css)
-
+console.log('first')
         setTimeout(() => {
             handleNextClick();
             setNextCart1('')
-            setNextCart2('')
-            setNextCart3('')
         }, 1000);
     }
 
     const handleNext2 = () => {
-        // setNextCart1(style.nextStep1Css)
+        console.log("Hey",style.nextStep2)
         setNextCart2(style.nextStep2)
         setTopCss2(style.nextStep2Css)
 
-        // setNextCart3(style.nextStep3Css)
-
         setTimeout(() => {
             handleNextClick();
-            // setNextCart1('')
-            setNextCart2('')
+            // setNextCart2('')
             setTopCss2('')
-            // setNextCart3('')
         }, 1000);
     }
 
     const handleBackStep3 = () => {
         setNextCart3(style.backStep3Css)
-        setNextCart2(style.backStep2Css)
+        setTopCss2(style.backStep2Css)
         handleBackClick();
+
         setTimeout(() => {
             setNextCart3('')
-            setNextCart2('')
+            setTopCss2('')
         }, 1000);
     }
 
@@ -60,6 +53,7 @@ const AppProvider = ({ children }) => {
         setNextCart2(style.backStep2)
         setNextCart1(style.backStep1Css)
         handleBackClick();
+
         setTimeout(() => {
             setNextCart2('')
             setNextCart1('')

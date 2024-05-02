@@ -20,7 +20,6 @@
 
 .nextStep2 {
     animation: width2 3s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes width2 {
@@ -42,19 +41,20 @@
 
 .nextStep2Css {
     animation: example1 3s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes example1 {
     from {
-        top: 260px;
+        transform: translateY(10px);
+        /* top: 260px; */
         /* width: 750px; */
         opacity: 1;
         /* transform: scaleX(1); */
     }
 
     to {
-        top: 500px;
+        transform: translateY(200px);
+        /* top: 500px; */
         /* width: 800px; */
         opacity: 0;
         /* transform: scaleX(1.05); */
@@ -95,10 +95,10 @@
 }
 
 .backStep2 {
-    animation: width2 3s;
+    animation: width-r2 3s;
 }
 
-@keyframes width2 {
+@keyframes width-r2 {
     from {
         /* width: 800px */
         transform: scaleX(1.05);

@@ -4,7 +4,7 @@ import { AppContext } from '../../context/AppContext'
 
 const Cart3 = () => {
     const { handleBackStep3, currentCart, nextCart3 } = useContext(AppContext)
-    console.log('Cart3',nextCart3)
+    // console.log('Cart3',nextCart3)
     return (
         <Flex
             className={currentCart === 2 ? nextCart3 : ''}
