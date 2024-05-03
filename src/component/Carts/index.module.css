@@ -1,144 +1,128 @@
-.nextStep1Css {
-    animation-name: example ;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+
+.topCart1Next {
+    animation: topCart1 1s ;
 }
 
-@keyframes example {
-    from {
-        /* top: 280px; */
+@keyframes topCart1 {
+    from{
         transform: translateY(0px);
         opacity: 1;
     }
 
-    to {
-        /* top: 500px; */
+    to{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+.widthCart2Next{
+    animation: widthCart2 1s ;
+}
+
+@keyframes widthCart2 {
+    form{
+        transform: scaleX(1);
+        /* min-width:750px; */
+    }
+
+    to{
+        transform: scaleX(1.05);
+        /* width:800px ; */
+    }
+}
+
+.topCart2Next{
+    animation: topCart2 1s;
+}
+
+@keyframes topCart2 {
+    form{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    to{
         transform: translateY(200px);
         opacity: 0;
     }
 }
 
-.nextStep2 {
-    animation: width2 3s;
+.widthCart3Next{
+    animation: widthCart3  1s;
 }
 
-@keyframes width2 {
-    from {
-        /* top: 260px; */
-        /* width: 750px; */
-        /* opacity: 1; */
+@keyframes widthCart3 {
+    from{
+        height: 250px;
         transform: scaleX(1);
     }
 
-    to {
-        /* top: 500px; */
-        /* width: 800px; */
-        /* opacity: 0; */
+    to{
+        height: 350px;
         transform: scaleX(1.05);
     }
 }
 
-
-.nextStep2Css {
-    animation: example1 3s;
+.widthCart3Back{
+    animation: widthBackCart3 1s;
 }
 
-@keyframes example1 {
-    from {
-        transform: translateY(10px);
-        /* top: 260px; */
-        /* width: 750px; */
-        opacity: 1;
-        /* transform: scaleX(1); */
+@keyframes widthBackCart3 {
+    from{
+        transform: scale(1.05);
     }
 
-    to {
-        transform: translateY(200px);
-        /* top: 500px; */
-        /* width: 800px; */
-        opacity: 0;
-        /* transform: scaleX(1.05); */
-    }
-}
-
-.nextStep3Css {
-    animation: example2 3s;
-}
-
-@keyframes example2 {
-    from {
-        /* width: 700px; */
-        transform: scaleX(1);
-    }
-
-    to {
-        /* width: 800px */
-        transform: scaleX(1.1);
-    }
-}
-
-.backStep1Css {
-    animation: back-step1 3s;
-
-}
-
-@keyframes back-step1 {
-    from {
-        top: 500px;
-        opacity: 0;
-    }
-
-    to {
-        top: 280px;
-        opacity: 1;
-    }
-}
-
-.backStep2 {
-    animation: width-r2 3s;
-}
-
-@keyframes width-r2 {
-    from {
-        /* width: 800px */
-        transform: scaleX(1.05);
-    }
-
-    to {
-        /* width: 750px; */
-        transform: scaleX(1);
-    }
-}
-
-.backStep2Css {
-    animation: back-step2 3s;
-}
-
-@keyframes back-step2 {
-    from {
-        top: 500px;
-        opacity: 0;
-    }
-
-    to {
-        top: 260px;
-        opacity: 1;
-    }
-
-}
-
-.backStep3Css {
-    animation: back-step3 3s;
-}
-
-@keyframes back-step3 {
-    from {
-        /* width: 800px; */
-        transform: scale(1.1);
-    }
-
-    to {
-        /* width: 700px; */
+    to{
         transform: scale(1);
     }
+    
 }
+
+.topCart2Back{
+    animation: topBackCart2 1s;
+}
+
+@keyframes topBackCart2 {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    } 
+}
+
+.widthCart2Back{
+    animation: widthBackCart2 1s;
+}
+
+@keyframes widthBackCart2 {
+    from{
+        transform: scaleX(1.05);
+    }
+
+    to{
+        transform: scaleX(1);
+    }
+}
+
+.topCart1Back{
+    animation: topBackCart1 1s;
+}
+
+@keyframes topBackCart1 {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+

@@ -1,16 +1,17 @@
 import React, { useContext } from 'react'
-import { Button, Box, Text, Flex, scaleFadeConfig, } from '@chakra-ui/react'
+import { Button, Box, Text, Flex} from '@chakra-ui/react'
 import { AppContext } from '../../context/AppContext'
+import style from './index.module.css'
+
+console.log('fade',style.fade)
 
 const Cart2 = () => {
-    const { handleNext2, currentCart, handleBackStep2, nextCart2 } = useContext(AppContext)
-    console.log('Cart2 : ', nextCart2)
+    const {  handleCart2Next, handleCart2Back , currentCart ,cart2NextWidth} = useContext(AppContext);
+
     return (
         <Flex
-            className={nextCart2}
-            // className={currentCart === 1 ? nextCart2 : ''}
+        className ={currentCart ===1 ? cart2NextWidth : ''}
             w='750px'
-            // w={currentCart === 2 ? '800px' : '750px'}
             transform={currentCart === 2 ? 'scaleX(1.05)' : 'scaleX(1)'}
             height='250px'
             p='40px'
@@ -19,8 +20,9 @@ const Cart2 = () => {
             justifyContent='space-between'
             borderRadius='20px'
         >
-            <Text
-                visibility={currentCart === 2 ? '' : 'hidden'}
+            <Text  
+            visibility={currentCart === 2 ? '' : 'hidden'}
+            className={currentCart === 2 ? style.fade : ''}
             >
                 <Box>Box2</Box>
                 <Box>ndbnklbg</Box>
@@ -28,10 +30,10 @@ const Cart2 = () => {
                 <Box>ndbnklbg</Box>
             </Text>
             <Box display='flex' w='100%' justifyContent='space-between' >
-                <Button variant='solid' bg='#480608' color='white' onClick={handleBackStep2} _hover={{ color: '#480608', bg: 'white' }}>
+                <Button variant='solid' bg='#480608' color='white' onClick={handleCart2Back} _hover={{ color: '#480608', bg: 'white' }}>
                     Back
                 </Button>
-                <Button variant='solid' bg='#480608' color='white' onClick={handleNext2} _hover={{ color: '#480608', bg: 'white' }}>
+                <Button variant='solid' bg='#480608' color='white' onClick={handleCart2Next} _hover={{ color: '#480608', bg: 'white' }}>
                     Next
                 </Button>
             </Box>

@@ -3,10 +3,9 @@ import { Button, Box, Text, Flex } from '@chakra-ui/react'
 import { AppContext } from '../../context/AppContext'
 
 const Cart1 = () => {
-    const { handleNext } = useContext(AppContext);
+    const {  handleCart1Next} = useContext(AppContext);
 
     return (
-        
         <Flex
             w='800px'
             height='350px'
@@ -23,7 +22,7 @@ const Cart1 = () => {
                 <Box>ndbnklbg</Box>
             </Text>
             <Box display='flex' w='100%' justifyContent='end' >
-                <Button variant='solid' bg='#480608' color='white' onClick={handleNext} _hover={{ color: '#480608', bg: 'white' }}>
+                <Button variant='solid' bg='#480608' color='white' onClick={handleCart1Next} _hover={{ color: '#480608', bg: 'white' }}>
                     Next
                 </Button>
             </Box>

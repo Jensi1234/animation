@@ -1,13 +1,14 @@
+
 import { createContext, useState } from "react";
 import style from '../component/Carts/index.module.css';
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
     const [currentCart, setCurrentCart] = useState(1)
-    const [nextCart1, setNextCart1] = useState('')
-    const [nextCart2, setNextCart2] = useState('')
-    const [nextCart3, setNextCart3] = useState('')
-    const [topCss2 , setTopCss2] = useState('')
+const [cart1NextTop , setCart1NextTop] = useState('')
+const [cart2NextWidth , setCart2NextWidth] = useState('')
+const [cart2NextTop , setCart2NextTop] = useState('')
+const [cart3NextWidth ,setCart3NextWidth] = useState('')
 
     const handleNextClick = () => {
         setCurrentCart(prev => prev + 1)
@@ -17,60 +18,61 @@ const AppProvider = ({ children }) => {
         setCurrentCart(prev => prev - 1)
     }
 
-    const handleNext = () => {
-        setNextCart1(style.nextStep1Css)
-console.log('first')
-        setTimeout(() => {
-            handleNextClick();
-            setNextCart1('')
-        }, 1000);
-    }
-
-    const handleNext2 = () => {
-        console.log("Hey",style.nextStep2)
-        setNextCart2(style.nextStep2)
-        setTopCss2(style.nextStep2Css)
+    const handleCart1Next = () =>{
+        setCart1NextTop(style.topCart1Next)
+        setCart2NextWidth(style.widthCart2Next)
 
         setTimeout(() => {
             handleNextClick();
-            // setNextCart2('')
-            setTopCss2('')
+            setCart1NextTop('')
+            setCart2NextWidth('')
         }, 1000);
     }
 
-    const handleBackStep3 = () => {
-        setNextCart3(style.backStep3Css)
-        setTopCss2(style.backStep2Css)
-        handleBackClick();
+    const handleCart2Next = () =>{  
+        setCart2NextTop(style.topCart2Next)
+        setCart3NextWidth(style.widthCart3Next)
 
         setTimeout(() => {
-            setNextCart3('')
-            setTopCss2('')
+            handleNextClick();
+            setCart3NextWidth('')
+            setCart2NextTop('')
         }, 1000);
     }
 
-    const handleBackStep2 = () => {
-        setNextCart2(style.backStep2)
-        setNextCart1(style.backStep1Css)
+    const handleCart2Back = () =>{
+        setCart1NextTop(style.topCart1Back)
+        setCart2NextWidth(style.widthCart2Back)
         handleBackClick();
-
         setTimeout(() => {
-            setNextCart2('')
-            setNextCart1('')
-        }, 1000);
+            setCart1NextTop('')
+            setCart2NextWidth('')
+        },1000)
     }
 
+    const handleCart3Back = () => {
+        setCart3NextWidth(style.widthCart3Back)
+        setCart2NextTop(style.topCart2Back)
+        handleBackClick();
+        setTimeout(() => {
+            setCart3NextWidth('')
+            setCart2NextTop('')
+        }, 1000);
+    }
+    
     return (
         <AppContext.Provider value={{
-            handleBackStep3,
-            handleBackStep2,
-            handleNext,
-            handleNext2,
-            topCss2,
+            handleNextClick,
+            handleCart1Next,
+            handleCart2Next,
+            handleBackClick ,
+            handleCart2Back,
+            handleCart3Back,
             currentCart,
-            nextCart1,
-            nextCart2,
-            nextCart3
+            cart1NextTop,
+            cart2NextWidth,
+            cart2NextTop,
+            cart3NextWidth,
         }}>
             {children}
         </AppContext.Provider>
