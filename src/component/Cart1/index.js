@@ -4,7 +4,6 @@ import { AppContext } from '../../context/AppContext'
 
 const Cart1 = () => {
     const { currentCart, handleCart1Next, cartOpacity } = useContext(AppContext);
-    console.log(cartOpacity)
 
     return (
         <Flex
@@ -19,17 +18,18 @@ const Cart1 = () => {
         >
             <Text
                 visibility='hidden'
-                className={currentCart === 1 ? cartOpacity : ''}>
-                <Box>Box1</Box>
-                <Box>ndbnklbg</Box>
-                <Box>ndbnklbg</Box>
-                <Box>ndbnklbg</Box>
-                <Box>ndbnklbg</Box>
-                <Box>ndbnklbg</Box>
-                <Box>ndbnklbg</Box>
+                className={currentCart === 1 ? cartOpacity : ''}
+                color='white'>
+                <Box>
+                    <Box fontSize='30px'> Where would you like to sell?</Box>
+                    <Box>ndbnklbg</Box>
+                    <Box>ndbnklbg</Box>
+                    <Box>ndbnklbg</Box>
+                    <Box>ndbnklbg</Box>
+                </Box>
             </Text>
             <Box display='flex' w='100%' justifyContent='end' >
-                <Button variant='solid' bg='#480608' color='white' onClick={handleCart1Next} _hover={{ color: '#480608', bg: 'white' }}>
+                <Button variant='solid' bg='black' color='white' onClick={handleCart1Next} _hover={{ color: 'black', bg: 'white' }}>
                     Next
                 </Button>
             </Box>

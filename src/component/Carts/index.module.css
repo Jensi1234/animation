@@ -1,145 +1,101 @@
-
 .topCart1Next {
-    animation: topCart1 1s ;
+    animation: topCart1 1s;
+    height: fit-content;
 }
 
 @keyframes topCart1 {
-    from{
-        height: 10px;
+    from {
+        max-height: 10px;
         transform: translateY(0px);
         opacity: 1;
     }
 
-    to{
-        height: auto;
+    to {
+        max-height: 800px;
         transform: translateY(100px);
         opacity: 0;
     }
 }
 
-.widthCart2Next , .widthCart3Next{
-    animation: widthCart2 1s ;
+.widthCart2Next,
+.widthCart3Next {
+    animation: widthCart2 1s;
+    height: fit-content;
 }
 
 @keyframes widthCart2 {
-    form{
-        height: 150px ;
+    form {
+        height: 150px;
         transform: scaleX(1);
     }
 
-    to{
-        height: auto ;
+    to {
+        max-height: 800px;
         transform: scaleX(1.05);
     }
 }
 
-.topCart2Next{
+.topCart2Next {
     animation: topCart2 1s;
 }
 
 @keyframes topCart2 {
-    form{
+    form {
         transform: translateY(0px);
         opacity: 1;
     }
 
-    to{
+    to {
         transform: translateY(200px);
         opacity: 0;
     }
 }
 
-/* .widthCart3Next{
-    animation: widthCart3  1s;
-}
-
-@keyframes widthCart3 {
-    from{
-        height: 150px;
-        transform: scaleX(1);
-    }
-
-    to{
-        height: auto;
-        transform: scaleX(1.05);
-    }
-} */
-
-.widthCart3Back{
+.widthCart3Back,
+.widthCart2Back {
     animation: widthBackCart3 1s;
 }
 
 @keyframes widthBackCart3 {
-    from{
+    from {
         transform: scale(1.05);
     }
 
-    to{
+    to {
         transform: scale(1);
     }
-    
+
 }
 
-.topCart2Back , .topCart1Back {
+.topCart2Back,
+.topCart1Back {
     animation: topBackCart2 1s;
 }
 
 @keyframes topBackCart2 {
-    from{
+    from {
         transform: translateY(100px);
         opacity: 0;
     }
 
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    } 
-}
-
-.widthCart2Back{
-    animation: widthBackCart2 1s;
-}
-
-@keyframes widthBackCart2 {
-    from{
-        transform: scaleX(1.05);
-    }
-
-    to{
-        transform: scaleX(1);
-    }
-}
-
-/* .topCart1Back{
-    animation: topBackCart1 1s;
-}
-
-@keyframes topBackCart1 {
-    from{
-        transform: translateY(100px);
-        opacity: 0;
-    }
-
-    to{
+    to {
         transform: translateY(0px);
         opacity: 1;
     }
+}
 
-} */
 
-.cartOpacity{
+.cartOpacity {
     animation: fadeIn 1s;
     visibility: visible !important;
 }
 
 @keyframes fadeIn {
-    from{
+    from {
         opacity: 0;
     }
 
-    to{
+    to {
         opacity: 1;
     }
 }
-
-
