@@ -3,20 +3,27 @@ import { Button, Box, Text, Flex } from '@chakra-ui/react'
 import { AppContext } from '../../context/AppContext'
 
 const Cart1 = () => {
-    const {  handleCart1Next} = useContext(AppContext);
+    const { currentCart, handleCart1Next, cartOpacity } = useContext(AppContext);
+    console.log(cartOpacity)
 
     return (
         <Flex
             w='800px'
-            height='350px'
+            height={currentCart === 1 ? 'auto' : ''}
             p='40px'
             bg='#088392'
             direction='column'
             justifyContent='space-between'
             borderRadius='20px'
+            gap='20px'
         >
-            <Text>
+            <Text
+                visibility='hidden'
+                className={currentCart === 1 ? cartOpacity : ''}>
                 <Box>Box1</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
                 <Box>ndbnklbg</Box>
                 <Box>ndbnklbg</Box>
                 <Box>ndbnklbg</Box>

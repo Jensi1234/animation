@@ -1,1 +1,13 @@
+.cart1Height{
+    animation: height 1s;
+}
 
+@keyframes height {
+    from{
+        height:400px ;
+    }
+
+    to{
+        height:auto ;
+    }
+}

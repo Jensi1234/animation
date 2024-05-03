@@ -5,29 +5,31 @@
 
 @keyframes topCart1 {
     from{
+        height: 10px;
         transform: translateY(0px);
         opacity: 1;
     }
 
     to{
+        height: auto;
         transform: translateY(100px);
         opacity: 0;
     }
 }
 
-.widthCart2Next{
+.widthCart2Next , .widthCart3Next{
     animation: widthCart2 1s ;
 }
 
 @keyframes widthCart2 {
     form{
+        height: 150px ;
         transform: scaleX(1);
-        /* min-width:750px; */
     }
 
     to{
+        height: auto ;
         transform: scaleX(1.05);
-        /* width:800px ; */
     }
 }
 
@@ -47,21 +49,21 @@
     }
 }
 
-.widthCart3Next{
+/* .widthCart3Next{
     animation: widthCart3  1s;
 }
 
 @keyframes widthCart3 {
     from{
-        height: 250px;
+        height: 150px;
         transform: scaleX(1);
     }
 
     to{
-        height: 350px;
+        height: auto;
         transform: scaleX(1.05);
     }
-}
+} */
 
 .widthCart3Back{
     animation: widthBackCart3 1s;
@@ -78,13 +80,13 @@
     
 }
 
-.topCart2Back{
+.topCart2Back , .topCart1Back {
     animation: topBackCart2 1s;
 }
 
 @keyframes topBackCart2 {
     from{
-        transform: translateY(200px);
+        transform: translateY(100px);
         opacity: 0;
     }
 
@@ -108,7 +110,7 @@
     }
 }
 
-.topCart1Back{
+/* .topCart1Back{
     animation: topBackCart1 1s;
 }
 
@@ -123,6 +125,21 @@
         opacity: 1;
     }
 
+} */
+
+.cartOpacity{
+    animation: fadeIn 1s;
+    visibility: visible !important;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
 }
 
 
