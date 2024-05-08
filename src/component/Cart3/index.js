@@ -8,8 +8,10 @@ const Cart3 = () => {
     return (
         <Flex
             className={currentCart === 2 ? cart3Width : ''}
-            w='700px'
-            transform={currentCart === 3 ? 'scaleX(1.05)' : 'scaleX(1)'}
+            w='700px'  
+            style={{'--start' : 0.8, '--end' :1}}
+            transform={currentCart === 3? 'scaleX(1)' : 'scaleX(0.8)'}
+            // transform={currentCart === 3 ? 'scaleX(1.05)' : 'scaleX(1)'}
             // height={currentCart === 3 ? '450px' : '150px'}
             maxH={currentCart === 3 ? 'auto' : '150px'}
             p='40px'
@@ -24,7 +26,15 @@ const Cart3 = () => {
                 className={currentCart === 3 ? cartOpacity : ''}
                 color='white'
             >
-                <Box>Box2</Box>
+                <Box>Box3</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
+                <Box>ndbnklbg</Box>
                 <Box>ndbnklbg</Box>
                 <Box>ndbnklbg</Box>
              

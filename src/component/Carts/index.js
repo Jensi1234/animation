@@ -7,7 +7,6 @@ import { AppContext } from "../../context/AppContext";
 
 const Carts = () => {
     const { currentCart, cart1Top, cart2Top } = useContext(AppContext);
-    console.log('top',cart2Top)
 
     return (
         <Box position="relative">
@@ -15,7 +14,7 @@ const Carts = () => {
                 <Box
                     position="absolute"
                     top='145px'>
-                    {/* style={{'--start' : currentCart === 1 ? 0.7: 0.8,'--end' : currentCart === 1 ?0.8 : 0.9} } */}
+                   
                     <Cart3 />
                 </Box>
             </Flex>

@@ -5,7 +5,7 @@
 
 @keyframes topCart1 {
     from {
-        max-height: 10px;
+        max-height: 100px;
         transform: translateY(0px);
         opacity: 1;
     }
@@ -18,20 +18,23 @@
 }
 
 .widthCart2Next,
-.widthCart3Next {
+.widthCart3Next 
+{
     animation: widthCart2 1s;
     height: fit-content;
 }
 
 @keyframes widthCart2 {
     form {
-        height: 150px;
-        transform: scaleX(1);
+        max-height: 150px;
+        transform: scaleX(var(--start));
+        /* transform: scaleX(1); */
     }
 
     to {
         max-height: 800px;
-        transform: scaleX(1.05);
+        transform: scaleX(var(--end));
+        /* transform: scaleX(1.05); */
     }
 }
 
@@ -58,11 +61,13 @@
 
 @keyframes widthBackCart3 {
     from {
-        transform: scale(1.05);
+        transform: scaleX(var(--end));
+        /* transform: scaleX(1.05); */
     }
 
     to {
-        transform: scale(1);
+        transform: scaleX(var(--start));
+        /* transform: scaleX(1); */
     }
 
 }
